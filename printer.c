@@ -136,7 +136,7 @@ do { \
     } \
     if ( havechan == 1 ) \
     { \
-        if ( dev->destline <= dev->currline ) \
+        if ( dev->destline < dev->currline ) \
         { \
             write_buffer (dev, "\f", 1, unitstat); \
             if (*unitstat != 0) return ; \
@@ -522,7 +522,7 @@ int   sockdev = 0;                     /* 1 == is socket device     */
                         return -1;
                     }
                     dev->fcb[line] = chan;
-                    if ( nxt == 0 )
+                    if ( *nxt == 0 ) 
                         break ;
                     ptr = nxt + 1;
                 }
@@ -551,7 +551,7 @@ int   sockdev = 0;                     /* 1 == is socket device     */
                         return -1;
                     }
                     dev->fcb[line] = chan;
-                    if ( nxt == 0 )
+                    if ( *nxt == 0 ) 
                         break ;
                     ptr = nxt + 1;
                 }
