@@ -7,7 +7,7 @@
 /*   (http://www.hercules-390.org/herclic.html) as modifications to  */
 /*   Hercules.                                                       */
 
-// $Id$
+// $Id: msgenu.h 7802 2011-10-22 09:27:10Z mcisho $
 
 /*-------------------------------------------------------------------*/
 /* This file contains the text of all of the messages issued by      */
@@ -754,7 +754,8 @@ do { \
 #define HHC00915 "%1d:%04X CTC: incorrect number of parameters"
 #define HHC00916 "%1d:%04X CTC: option '%s' value '%s' invalid"
 #define HHC00917 "%1d:%04X CTC: default value '%s' is used for option '%s'"
-#define HHC00918 "%1d:%04X CTC: option specified incorrectly or unknown option"
+#define HHC00918 "%1d:%04X CTC: option '%s' unknown or specified incorrectly"
+#define HHC00919 "%1d:%04X CTC: option '%s' must be specified"
 
 /* ctc_lcs.c */
 #define HHC00920 "%1d:%04X CTC: lcs device %04X not in configuration"

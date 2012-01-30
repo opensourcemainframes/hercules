@@ -1,11 +1,11 @@
-/* CTC_PTP.C    (c) Copyright Ian Shorter, 2009-2011                 */
+/* CTC_PTP.C    (c) Copyright Ian Shorter, 2011                      */
 /*              MPC Point-To-Point (PTP)                             */
 /*                                                                   */
 /*   Released under "The Q Public License Version 1"                 */
 /*   (http://www.hercules-390.org/herclic.html) as modifications to  */
 /*   Hercules.                                                       */
 
-// $Id: ctc_ptp.c 5125 2009-12-25 12:00:00Z ian $
+// $Id$
 
 /* This module contains device handling functions for the            */
 /* MPCPTP and/or MPCPTP6 emulated connection                         */
@@ -2874,8 +2874,8 @@ int  parse_conf_stmt( DEVBLK* pDEVBLK, PPTPBLK pPTPBLK,
 #endif /* defined( OPTION_W32_CTCI ) */
 
         default:
-            // HHC00918 "%1d:%04X CTC: option specified incorrectly or unknown option"
-            WRMSG(HHC00918, "E", SSID_TO_LCSS(pDEVBLK->ssid), pDEVBLK->devnum );
+            // HHC00918 "%1d:%04X CTC: option '%s' unknown or specified incorrectly"
+            WRMSG(HHC00918, "E", SSID_TO_LCSS(pDEVBLK->ssid), pDEVBLK->devnum, (char)c );
             return -1;
         }
 
